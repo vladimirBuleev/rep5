@@ -1,7 +1,7 @@
 package CoffeeShop2;
 
 public class Cinnamon implements IProduct {
-    IProduct product;
+    private final IProduct product;
     public Cinnamon(IProduct product){
         this.product=product;
     }

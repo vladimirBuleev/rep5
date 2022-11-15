@@ -1,8 +1,8 @@
 package Calc2;
 
 public class Elements {
-    double x;
-    double y;
+    private double x;
+    private double y;
 
     public double getX() {
         return x;

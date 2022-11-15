@@ -1,7 +1,7 @@
 package Calc2;
 
-public class Action {
-    public Operation fabric(OperationType type) {
+public class ActionFactory {
+    public Operation create(OperationType type) {
         if (type == OperationType.ADD) {
             return new Add();
         } else if (type == OperationType.SUB) {

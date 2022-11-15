@@ -1,7 +1,7 @@
 package zeroOnes;
 
 public class Action {
-    String value;
+    private final String value;
     AmountSymbols amountSymbols = new AmountSymbols();
 
     Action(String value) {
@@ -9,9 +9,8 @@ public class Action {
     }
 
     public void action() {
-        OddOrEvenForOnes oddOrEvenForOnes = new OddOrEvenForOnes();
-        OddOrEvenForZeroes oddOrEvenForZeroes = new OddOrEvenForZeroes();
-        if (oddOrEvenForZeroes.oddOrEven(amountSymbols.getAmountSymbols(value, '0'))&& oddOrEvenForOnes.oddOrEven(amountSymbols.getAmountSymbols(value, '1'))) {
+        OddOrEven oddOrEven = new OddOrEven();
+        if (!oddOrEven.oddOrEven(amountSymbols.getAmountSymbols(value, '0'))&& oddOrEven.oddOrEven(amountSymbols.getAmountSymbols(value, '1'))) {
             System.out.println("работает");
         } else {
             System.out.println("не работает");

@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Elements elements = new Elements();
-        Action action = new Action();
+        ActionFactory actionFactory = new ActionFactory();
         elements.setX(scan.nextDouble());
-        Operation calc = action.fabric(OperationType.ADD.getOperationType(scan.next()));
+        Operation calc = actionFactory.create(OperationType.getOperationType(scan.next()));
         elements.setY(scan.nextDouble());
         System.out.println(calc.operate(elements.getX(), elements.getY()));
 
